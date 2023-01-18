@@ -15,6 +15,7 @@ import chess.pieces.Queen;
 import chess.pieces.Rook;
 
 public class ChessMatch {
+// partida de xadrez, coração do código
 
 	private int turn;
 	private Color currentPlayer;
