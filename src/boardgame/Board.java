@@ -3,12 +3,16 @@ package boardgame;
 public class Board {
 
 	private int rows;
+	//linhas
 	private int columns;
+	//colunas
 	private Piece[][] pieces;
+	//peças
 	
 	public Board(int rows, int columns) {
 		if (rows < 1 || columns < 1) {
 			throw new BoardException("Error creating board: there must be at least 1 row and 1 column");
+			// tratamento de excessão
 		}
 		this.rows = rows;
 		this.columns = columns;
@@ -26,6 +30,7 @@ public class Board {
 	public Piece piece(int row, int column) {
 		if (!positionExists(row, column)) {
 			throw new BoardException("Position not on the board");
+			// tratamento de excessão
 		}
 		return pieces[row][column];
 	}
@@ -33,6 +38,7 @@ public class Board {
 	public Piece piece(Position position) {
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");
+		//// tratamento de excessão
 		}
 		return pieces[position.getRow()][position.getColumn()];
 	}
@@ -40,6 +46,7 @@ public class Board {
 	public void placePiece(Piece piece, Position position) {
 		if (thereIsAPiece(position)) {
 			throw new BoardException("There is already a piece on position " + position);
+		//// tratamento de excessão
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
@@ -48,6 +55,7 @@ public class Board {
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");
+		// tratamento de excessão
 		}
 		if (piece(position) == null) {
 			return null;

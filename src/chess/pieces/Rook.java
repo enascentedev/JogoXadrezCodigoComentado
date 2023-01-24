@@ -6,6 +6,7 @@ import chess.ChessPiece;
 import chess.Color;
 
 public class Rook extends ChessPiece {
+	//classe filha de chessPiece
 
 	public Rook(Board board, Color color) {
 		super(board, color);
@@ -13,7 +14,8 @@ public class Rook extends ChessPiece {
 
 	@Override
 	public String toString() {
-		return "R";
+		return "R"; 
+		\\aonde estiver a peça vai aparecer o R
 	}
 	
 	@Override

@@ -3,6 +3,7 @@ package boardgame;
 public abstract class Piece {
 
 	protected Position position;
+	//a posição é protegida 
 	private Board board;
 	
 	public Piece(Board board) {
